@@ -30,7 +30,7 @@ class TableViewCell: UITableViewCell {
     // MARK: - Private Methods
     private func updateView(){
         nameLabel.text = transaction.name!
-        priceLabel.text = transaction.price!
+        priceLabel.text = "$" + transaction.price!
     }
     
     // MARK: - <#delegate#>

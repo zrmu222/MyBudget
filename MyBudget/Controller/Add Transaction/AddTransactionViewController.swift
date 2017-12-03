@@ -43,9 +43,9 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate  {
         
         if let _ = Double(priceTextField.text!) {
             let transaction = Transaction(name: nameTextField.text!, category: categoryTextField.text!,
-                                          price: "$" + priceTextField.text!, date: dateTextField.text!, description: descriptionTextField.text!)
-            let manager = TransactionManager.transactionManager
-            manager.addTransaction(transaction: transaction)
+                                          price: priceTextField.text!, date: dateTextField.text!, description: descriptionTextField.text!)
+            let manager = TransactionSvcSQLite.transactionManager
+            manager.createTransaction(transaction: transaction)
             
             navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)

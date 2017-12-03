@@ -38,9 +38,15 @@ class DetailViewController: UIViewController {
         deleteButton.isHidden = true
         nameLabel.text = transaction.name
         categoryLabel.text = transaction.category
-        priceLabel.text = transaction.price
+        priceLabel.text = "$" + transaction.price!
         dateLabel.text = transaction.date
         descriptionLabel.text = transaction.note
+        nameTextField.text = transaction.name
+        categoryTextField.text = transaction.category
+        priceTextField.text = transaction.price
+        dateTextField.text = transaction.date
+        descriptionTextField.text = transaction.note
+        
         NSLog("DetailView Loaded")
     }
     
@@ -67,19 +73,22 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: - <#delegate#>
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 
     // MARK: - Actions
-
+    @IBAction func backgroundTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
     @IBAction func editButton(_ sender: UIButton) {
         
         if editButton.titleLabel?.text == "Edit" {
             sender.setTitle("Save", for: .normal)
-            nameTextField.text = nameLabel.text
-            categoryTextField.text = categoryLabel.text
-            priceTextField.text = priceLabel.text
-            dateTextField.text = dateLabel.text
-            descriptionTextField.text = descriptionLabel.text
             hidLabel(hid: true)
             hidTextFields(hid: false)
             deleteButton.isHidden = false
@@ -87,16 +96,18 @@ class DetailViewController: UIViewController {
             sender.setTitle("Edit", for: .normal)
             //hidTextFields(hid: true)
             hidLabel(hid: false)
-            let newTransaction = Transaction(name: nameTextField.text!, category: categoryTextField.text!,
-                                                               price: priceTextField.text!, date: dateTextField.text!, description: descriptionTextField.text!)
-            TransactionManager.transactionManager.updateTransaction(oldTransaction: transaction, newTransaction: newTransaction)
-            transaction = newTransaction
+            transaction.name = nameTextField.text
+            transaction.category = categoryTextField.text
+            transaction.price = priceTextField.text
+            transaction.date = dateTextField.text
+            transaction.note = descriptionTextField.text
+            TransactionSvcSQLite.transactionManager.updateTransaction(transaction: transaction)
             self.viewWillAppear(true)
         }
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
-        TransactionManager.transactionManager.deleteTransaction(transaction: transaction)
+        TransactionSvcSQLite.transactionManager.deleteTransaction(transaction: transaction)
         _ = navigationController?.popViewController(animated: true)
     }
     

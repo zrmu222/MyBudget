@@ -21,12 +21,12 @@ class TranactionListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        transactionList = TransactionManager.transactionManager.transactionList
+        transactionList = TransactionSvcSQLite.transactionManager.transactionList
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        transactionList = TransactionManager.transactionManager.transactionList
+        transactionList = TransactionSvcSQLite.transactionManager.transactionList
         self.tableView.reloadData()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
@@ -62,7 +62,7 @@ class TranactionListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return transactionList.count
+        return TransactionSvcSQLite.transactionManager.transactionList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,9 +76,9 @@ class TranactionListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
                             forRowAt indexPath: IndexPath){
         if editingStyle == .delete {
-            let tranx = TransactionManager.transactionManager.transactionList[indexPath.row]
-            TransactionManager.transactionManager.deleteTransaction(transaction: tranx)
-            self.transactionList = TransactionManager.transactionManager.transactionList
+            let tranx = TransactionSvcSQLite.transactionManager.transactionList[indexPath.row]
+            TransactionSvcSQLite.transactionManager.deleteTransaction(transaction: tranx)
+            self.transactionList = TransactionSvcSQLite.transactionManager.transactionList
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }

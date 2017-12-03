@@ -9,6 +9,10 @@
 import UIKit
 
 class TransactionManager: ITransactionManagerSvc {
+    func updateTransaction(transaction: Transaction) {
+        
+    }
+    
     
     
     // MARK: - Public Properties
@@ -34,7 +38,7 @@ class TransactionManager: ITransactionManagerSvc {
         }
     }
     
-    func addTransaction(transaction: Transaction){
+    func createTransaction(transaction: Transaction){
         transactionList.append(transaction)
         let success = saveTransactionList()
         if success {
@@ -48,7 +52,7 @@ class TransactionManager: ITransactionManagerSvc {
         
         if let index = transactionList.index(of: oldTransaction){
             transactionList.remove(at: index)
-            addTransaction(transaction: newTransaction)
+            createTransaction(transaction: newTransaction)
             NSLog("Transaction: \(oldTransaction) updated to \(newTransaction)")
         }
         

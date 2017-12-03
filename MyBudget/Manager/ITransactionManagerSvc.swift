@@ -10,7 +10,7 @@ import Foundation
 
 protocol ITransactionManagerSvc {
     
-    func addTransaction(transaction: Transaction)
-    func updateTransaction(oldTransaction: Transaction, newTransaction: Transaction)
+    func createTransaction(transaction: Transaction)
+    func updateTransaction(transaction: Transaction)
     func deleteTransaction(transaction: Transaction)
 }

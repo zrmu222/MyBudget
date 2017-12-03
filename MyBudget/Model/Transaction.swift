@@ -11,16 +11,18 @@ import UIKit
 class Transaction: NSObject, NSCoding {
     
     // MARK: - Public Properties
+    var id: Int?
     var name: String?
     var category: String?
     var price: String?
     var date: String?
     var note: String?
-    var id: Int?
     
     // MARK: - Private Properties
     
     //MARK: - Init
+    override init(){}
+    
     init(name: String, category: String,
          price: String, date: String, description: String){
         super.init()
