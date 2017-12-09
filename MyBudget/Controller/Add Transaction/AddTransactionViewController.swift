@@ -42,11 +42,15 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate  {
     @IBAction func addTransaction(_ sender: UIButton) {
         
         if let _ = Double(priceTextField.text!) {
-            let transaction = Transaction(name: nameTextField.text!, category: categoryTextField.text!,
-                                          price: priceTextField.text!, date: dateTextField.text!, description: descriptionTextField.text!)
-            let manager = TransactionSvcSQLite.transactionManager
-            manager.createTransaction(transaction: transaction)
-            
+            let manager = TransactionSvcCoreData.getInstance()
+            let transaction = manager.createManagedObject()
+            transaction.name = nameTextField.text!
+            transaction.category = categoryTextField.text!
+            transaction.price = priceTextField.text!
+            transaction.date = dateTextField.text!
+            transaction.note = descriptionTextField.text!
+            manager.create(transaction: transaction)
+        
             navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
             NSLog("Transaction Added")

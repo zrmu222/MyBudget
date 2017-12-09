@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
-    var transaction: Transaction!
+    var transaction: TransactionModel!
     
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -101,13 +101,13 @@ class DetailViewController: UIViewController {
             transaction.price = priceTextField.text
             transaction.date = dateTextField.text
             transaction.note = descriptionTextField.text
-            TransactionSvcSQLite.transactionManager.updateTransaction(transaction: transaction)
+            TransactionSvcCoreData.getInstance().update(transaction: transaction)
             self.viewWillAppear(true)
         }
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
-        TransactionSvcSQLite.transactionManager.deleteTransaction(transaction: transaction)
+        TransactionSvcCoreData.getInstance().delete(transaction: transaction)
         _ = navigationController?.popViewController(animated: true)
     }
     
