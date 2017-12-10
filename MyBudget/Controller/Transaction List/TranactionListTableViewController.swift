@@ -13,6 +13,7 @@ class TranactionListTableViewController: UITableViewController {
     
     // MARK: - Public Properties
     var transactionList = [TransactionModel]()
+    let transactionManager = TransactionSvcCoreData.getInstance()
     
     // MARK: - Private Properties
     
@@ -21,12 +22,12 @@ class TranactionListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        transactionList = TransactionSvcCoreData.getInstance().retrieveAll()
+        transactionList = transactionManager.retrieveAll()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        transactionList = TransactionSvcCoreData.getInstance().retrieveAll()
+        transactionList = transactionManager.retrieveAll()
         self.tableView.reloadData()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
@@ -62,7 +63,7 @@ class TranactionListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return TransactionSvcCoreData.getInstance().getCount()
+        return transactionManager.getCount()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,9 +77,9 @@ class TranactionListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
                             forRowAt indexPath: IndexPath){
         if editingStyle == .delete {
-            let tranx = TransactionSvcCoreData.getInstance().retrieveAll()[indexPath.row]
-            TransactionSvcCoreData.getInstance().delete(transaction: tranx)
-            self.transactionList = TransactionSvcCoreData.getInstance().retrieveAll()
+            let tranx = transactionManager.retrieveAll()[indexPath.row]
+            transactionManager.delete(transaction: tranx)
+            self.transactionList = transactionManager.retrieveAll()
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }

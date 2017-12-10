@@ -58,7 +58,11 @@ class CodeDataTest: XCTestCase {
             NSLog("Update Transaction Test Faileds")
         }
         
-        
+        //Delete Transaction
+        transactionManager.delete(transaction: transaction)
+        list = transactionManager.retrieveAll()
+        assert(list.count == 0)
+        NSLog("Delete Transaction Test passed")
         
         
         
