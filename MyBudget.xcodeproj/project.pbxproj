@@ -17,13 +17,6 @@
 		DE2F14841FB8F31A001FFF11 /* MyBudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F14831FB8F31A001FFF11 /* MyBudgetUITests.swift */; };
 		DE2F14941FB8F3C7001FFF11 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F14931FB8F3C7001FFF11 /* Transaction.swift */; };
 		DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D85C41FB90F5600EEB549 /* TranactionListTableViewController.swift */; };
-		DE5980611FD05EE7001A5CD1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */; };
-		DE5980911FD060BD001A5CD1 /* TransactionSvcSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5980901FD060BD001A5CD1 /* TransactionSvcSQLite.swift */; };
-		DE5980921FD074C7001A5CD1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DE59808A1FD06078001A5CD1 /* FMDatabaseQueue.m */; };
-		DE5980931FD074C7001A5CD1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DE59808E1FD06078001A5CD1 /* FMResultSet.m */; };
-		DE5980941FD074C7001A5CD1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE59808D1FD06078001A5CD1 /* FMDatabaseAdditions.m */; };
-		DE5980951FD074C7001A5CD1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE59808F1FD06078001A5CD1 /* FMDatabasePool.m */; };
-		DE5980961FD074C7001A5CD1 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5980861FD06077001A5CD1 /* FMDatabase.m */; };
 		DE6AE2CA1FC648ED009B8409 /* ITransactionManagerSvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6AE2C91FC648ED009B8409 /* ITransactionManagerSvc.swift */; };
 		DE6D087C1FDC2AA1008421FD /* CodeDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */; };
 		DEB644591FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB644571FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld */; };
@@ -31,7 +24,6 @@
 		DEB6445D1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6445B1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift */; };
 		DEB6445F1FD8B9D4009C7948 /* TransactionSvcCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6445E1FD8B9D4009C7948 /* TransactionSvcCoreData.swift */; };
 		DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC43BA81FBF932200DFC163 /* DetailViewController.swift */; };
-		DEDC592A1FD305CC00466EFB /* SQLiteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDC59291FD305CC00466EFB /* SQLiteTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,20 +61,6 @@
 		DE2F14931FB8F3C7001FFF11 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		DE4D85C41FB90F5600EEB549 /* TranactionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranactionListTableViewController.swift; sourceTree = "<group>"; };
 		DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		DE5980621FD05FD9001A5CD1 /* MyBudget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBudget-Bridging-Header.h"; sourceTree = "<group>"; };
-		DE5980841FD06077001A5CD1 /* FMDatabasePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		DE5980851FD06077001A5CD1 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		DE5980861FD06077001A5CD1 /* FMDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		DE5980871FD06077001A5CD1 /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		DE5980881FD06077001A5CD1 /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		DE5980891FD06077001A5CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE59808A1FD06078001A5CD1 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		DE59808B1FD06078001A5CD1 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		DE59808C1FD06078001A5CD1 /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		DE59808D1FD06078001A5CD1 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		DE59808E1FD06078001A5CD1 /* FMResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		DE59808F1FD06078001A5CD1 /* FMDatabasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		DE5980901FD060BD001A5CD1 /* TransactionSvcSQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSvcSQLite.swift; sourceTree = "<group>"; };
 		DE6AE2C91FC648ED009B8409 /* ITransactionManagerSvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITransactionManagerSvc.swift; sourceTree = "<group>"; };
 		DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataTest.swift; sourceTree = "<group>"; };
 		DEB644581FD8B7A7009C7948 /* TransactionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -90,7 +68,6 @@
 		DEB6445B1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DEB6445E1FD8B9D4009C7948 /* TransactionSvcCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSvcCoreData.swift; sourceTree = "<group>"; };
 		DEC43BA81FBF932200DFC163 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DEDC59291FD305CC00466EFB /* SQLiteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE5980611FD05EE7001A5CD1 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +136,6 @@
 		DE2F14621FB8F31A001FFF11 /* MyBudget */ = {
 			isa = PBXGroup;
 			children = (
-				DE5980621FD05FD9001A5CD1 /* MyBudget-Bridging-Header.h */,
-				DE5980831FD06077001A5CD1 /* FMDatebase */,
 				DE87089E1FBA6DD300F8D1BB /* View */,
 				DE4D85C31FB90F3E00EEB549 /* Controller */,
 				DE2F14921FB8F3AD001FFF11 /* Manager */,
@@ -180,7 +154,6 @@
 				DE2F14781FB8F31A001FFF11 /* MyBudgetTests.swift */,
 				DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */,
 				DE2F147A1FB8F31A001FFF11 /* Info.plist */,
-				DEDC59291FD305CC00466EFB /* SQLiteTest.swift */,
 			);
 			path = MyBudgetTests;
 			sourceTree = "<group>";
@@ -209,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				DE6AE2C91FC648ED009B8409 /* ITransactionManagerSvc.swift */,
-				DE5980901FD060BD001A5CD1 /* TransactionSvcSQLite.swift */,
 				DEB6445E1FD8B9D4009C7948 /* TransactionSvcCoreData.swift */,
 			);
 			path = Manager;
@@ -231,25 +203,6 @@
 				DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DE5980831FD06077001A5CD1 /* FMDatebase */ = {
-			isa = PBXGroup;
-			children = (
-				DE5980871FD06077001A5CD1 /* FMDatabase.h */,
-				DE5980861FD06077001A5CD1 /* FMDatabase.m */,
-				DE5980851FD06077001A5CD1 /* FMDatabaseAdditions.h */,
-				DE59808D1FD06078001A5CD1 /* FMDatabaseAdditions.m */,
-				DE5980841FD06077001A5CD1 /* FMDatabasePool.h */,
-				DE59808F1FD06078001A5CD1 /* FMDatabasePool.m */,
-				DE59808B1FD06078001A5CD1 /* FMDatabaseQueue.h */,
-				DE59808A1FD06078001A5CD1 /* FMDatabaseQueue.m */,
-				DE5980881FD06077001A5CD1 /* FMDB.h */,
-				DE59808C1FD06078001A5CD1 /* FMResultSet.h */,
-				DE59808E1FD06078001A5CD1 /* FMResultSet.m */,
-				DE5980891FD06077001A5CD1 /* Info.plist */,
-			);
-			path = FMDatebase;
 			sourceTree = "<group>";
 		};
 		DE87089E1FBA6DD300F8D1BB /* View */ = {
@@ -406,20 +359,14 @@
 				DE2F14941FB8F3C7001FFF11 /* Transaction.swift in Sources */,
 				DEB6445D1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift in Sources */,
 				DE2F14641FB8F31A001FFF11 /* AppDelegate.swift in Sources */,
-				DE5980951FD074C7001A5CD1 /* FMDatabasePool.m in Sources */,
-				DE5980961FD074C7001A5CD1 /* FMDatabase.m in Sources */,
 				DE179AF71FB9286600597052 /* AddTransactionViewController.swift in Sources */,
 				DEB644591FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld in Sources */,
 				DE179AF91FB9680600597052 /* TableViewCell.swift in Sources */,
-				DE5980911FD060BD001A5CD1 /* TransactionSvcSQLite.swift in Sources */,
-				DE5980921FD074C7001A5CD1 /* FMDatabaseQueue.m in Sources */,
 				DEB6445C1FD8B8BC009C7948 /* TransactionModel+CoreDataClass.swift in Sources */,
 				DE6AE2CA1FC648ED009B8409 /* ITransactionManagerSvc.swift in Sources */,
-				DE5980931FD074C7001A5CD1 /* FMResultSet.m in Sources */,
 				DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */,
 				DEB6445F1FD8B9D4009C7948 /* TransactionSvcCoreData.swift in Sources */,
 				DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */,
-				DE5980941FD074C7001A5CD1 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2F14791FB8F31A001FFF11 /* MyBudgetTests.swift in Sources */,
-				DEDC592A1FD305CC00466EFB /* SQLiteTest.swift in Sources */,
 				DE6D087C1FDC2AA1008421FD /* CodeDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,7 +542,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Murphy.MyBudget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MyBudget/MyBudget-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,7 +561,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Murphy.MyBudget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MyBudget/MyBudget-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     var transaction: TransactionModel!
     
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
     // MARK: - Private Properties
 
@@ -46,6 +47,7 @@ class DetailViewController: UIViewController {
         priceTextField.text = transaction.price
         dateTextField.text = transaction.date
         descriptionTextField.text = transaction.note
+        errorLabel.isHidden = true
         
         NSLog("DetailView Loaded")
     }
@@ -93,16 +95,20 @@ class DetailViewController: UIViewController {
             hidTextFields(hid: false)
             deleteButton.isHidden = false
         }else {
-            sender.setTitle("Edit", for: .normal)
-            //hidTextFields(hid: true)
-            hidLabel(hid: false)
-            transaction.name = nameTextField.text
-            transaction.category = categoryTextField.text
-            transaction.price = priceTextField.text
-            transaction.date = dateTextField.text
-            transaction.note = descriptionTextField.text
-            TransactionSvcCoreData.getInstance().update(transaction: transaction)
-            self.viewWillAppear(true)
+            if let _ = Double(priceTextField.text!){
+                sender.setTitle("Edit", for: .normal)
+                hidLabel(hid: false)
+                transaction.name = nameTextField.text
+                transaction.category = categoryTextField.text
+                transaction.price = priceTextField.text
+                transaction.date = dateTextField.text
+                transaction.note = descriptionTextField.text
+                TransactionSvcCoreData.getInstance().update(transaction: transaction)
+                self.viewWillAppear(true)
+            }else {
+                errorLabel.text = "Please enter a valid number"
+                errorLabel.isHidden = false
+            }
         }
     }
     

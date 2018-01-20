@@ -14,14 +14,15 @@ class TranactionListTableViewController: UITableViewController {
     // MARK: - Public Properties
     var transactionList = [TransactionModel]()
     let transactionManager = TransactionSvcCoreData.getInstance()
+    var sectionNames = ["Transaction", "Total"]
     
+    @IBOutlet weak var addTransactionButton: UIBarButtonItem!
     // MARK: - Private Properties
     
     
     // MARK: - <#superclass#>
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         transactionList = transactionManager.retrieveAll()
     }
     
@@ -38,12 +39,17 @@ class TranactionListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         switch segue.identifier {
         case "showTransaction"?:
-            if let row = tableView.indexPathForSelectedRow?.row {
-                let tranx = transactionList[row]
-                let detailViewController = segue.destination as! DetailViewController
-                detailViewController.transaction = tranx
+            NSLog("SectionNumber: \(String(describing: tableView.indexPathForSelectedRow?.section))")
+            if tableView.indexPathForSelectedRow?.section == 0{
+                if let row = tableView.indexPathForSelectedRow?.row {
+                    let tranx = transactionList[row]
+                    let detailViewController = segue.destination as! DetailViewController
+                    detailViewController.transaction = tranx
+                }
+            }else{
             }
         case "addTransaction"?:
             _ = segue.destination as! AddTransactionViewController
@@ -57,33 +63,66 @@ class TranactionListTableViewController: UITableViewController {
     
     // MARK: - Private Methods
     
+    func getTotal() -> Double {
+        
+        var total: Double = 0.0
+        
+        for t in transactionList {
+            if let price = Double(t.price!) {
+                total += price
+            }
+        }
+        return total
+    }
+    
+    
+    
     
     // MARK: - <#delegate#>
+    
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return transactionManager.getCount()
+        if section == 0 {
+            return transactionManager.getCount()
+        }else {
+            return 1
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionNames.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionNames[section]
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell: TableViewCell
         // Configure the cell...
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TableViewCell
-        cell.transaction = transactionList[indexPath.row]
+        if indexPath.section == 0{
+            cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TableViewCell
+            cell.transaction = transactionList[indexPath.row]
+        }else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "TotalCell", for: indexPath) as! TableViewCell
+            cell.nameLabel.text = "Total"
+            cell.priceLabel.text = "$\(getTotal())"
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
                             forRowAt indexPath: IndexPath){
-        if editingStyle == .delete {
-            let tranx = transactionManager.retrieveAll()[indexPath.row]
-            transactionManager.delete(transaction: tranx)
-            self.transactionList = transactionManager.retrieveAll()
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.tableView.reloadData()
+        if indexPath.section == 0 {
+            if editingStyle == .delete {
+                let tranx = transactionManager.retrieveAll()[indexPath.row]
+                transactionManager.delete(transaction: tranx)
+                self.transactionList = transactionManager.retrieveAll()
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.tableView.reloadData()
+            }
         }
-        
     }
     
     // MARK: - Actions
