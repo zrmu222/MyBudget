@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
-    var transaction: TransactionModel!
+    var transaction: Transaction!
     
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
@@ -88,33 +88,33 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func editButton(_ sender: UIButton) {
-        
-        if editButton.titleLabel?.text == "Edit" {
-            sender.setTitle("Save", for: .normal)
-            hidLabel(hid: true)
-            hidTextFields(hid: false)
-            deleteButton.isHidden = false
-        }else {
-            if let _ = Double(priceTextField.text!){
-                sender.setTitle("Edit", for: .normal)
-                hidLabel(hid: false)
-                transaction.name = nameTextField.text
-                transaction.category = categoryTextField.text
-                transaction.price = priceTextField.text
-                transaction.date = dateTextField.text
-                transaction.note = descriptionTextField.text
-                TransactionSvcCoreData.getInstance().update(transaction: transaction)
-                self.viewWillAppear(true)
-            }else {
-                errorLabel.text = "Please enter a valid number"
-                errorLabel.isHidden = false
-            }
-        }
+//
+//        if editButton.titleLabel?.text == "Edit" {
+//            sender.setTitle("Save", for: .normal)
+//            hidLabel(hid: true)
+//            hidTextFields(hid: false)
+//            deleteButton.isHidden = false
+//        }else {
+//            if let _ = Double(priceTextField.text!){
+//                sender.setTitle("Edit", for: .normal)
+//                hidLabel(hid: false)
+//                transaction.name = nameTextField.text
+//                transaction.category = categoryTextField.text
+//                transaction.price = priceTextField.text
+//                transaction.date = dateTextField.text
+//                transaction.note = descriptionTextField.text
+//                TransactionSvcCoreData.getInstance().update(transaction: transaction)
+//                self.viewWillAppear(true)
+//            }else {
+//                errorLabel.text = "Please enter a valid number"
+//                errorLabel.isHidden = false
+//            }
+//        }
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
-        TransactionSvcCoreData.getInstance().delete(transaction: transaction)
-        _ = navigationController?.popViewController(animated: true)
+//        TransactionSvcCoreData.getInstance().delete(transaction: transaction)
+//        _ = navigationController?.popViewController(animated: true)
     }
     
 }

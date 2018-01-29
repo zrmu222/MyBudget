@@ -17,12 +17,8 @@
 		DE2F14841FB8F31A001FFF11 /* MyBudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F14831FB8F31A001FFF11 /* MyBudgetUITests.swift */; };
 		DE2F14941FB8F3C7001FFF11 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F14931FB8F3C7001FFF11 /* Transaction.swift */; };
 		DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D85C41FB90F5600EEB549 /* TranactionListTableViewController.swift */; };
-		DE6AE2CA1FC648ED009B8409 /* ITransactionManagerSvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6AE2C91FC648ED009B8409 /* ITransactionManagerSvc.swift */; };
 		DE6D087C1FDC2AA1008421FD /* CodeDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */; };
-		DEB644591FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB644571FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld */; };
-		DEB6445C1FD8B8BC009C7948 /* TransactionModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6445A1FD8B8BC009C7948 /* TransactionModel+CoreDataClass.swift */; };
-		DEB6445D1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6445B1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift */; };
-		DEB6445F1FD8B9D4009C7948 /* TransactionSvcCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6445E1FD8B9D4009C7948 /* TransactionSvcCoreData.swift */; };
+		DE83697F201E956A003290CA /* TransactionSvcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83697E201E956A003290CA /* TransactionSvcAPI.swift */; };
 		DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC43BA81FBF932200DFC163 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +57,8 @@
 		DE2F14931FB8F3C7001FFF11 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		DE4D85C41FB90F5600EEB549 /* TranactionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranactionListTableViewController.swift; sourceTree = "<group>"; };
 		DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		DE6AE2C91FC648ED009B8409 /* ITransactionManagerSvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITransactionManagerSvc.swift; sourceTree = "<group>"; };
 		DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataTest.swift; sourceTree = "<group>"; };
-		DEB644581FD8B7A7009C7948 /* TransactionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionDataModel.xcdatamodel; sourceTree = "<group>"; };
-		DEB6445A1FD8B8BC009C7948 /* TransactionModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionModel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DEB6445B1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DEB6445E1FD8B9D4009C7948 /* TransactionSvcCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSvcCoreData.swift; sourceTree = "<group>"; };
+		DE83697E201E956A003290CA /* TransactionSvcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSvcAPI.swift; sourceTree = "<group>"; };
 		DEC43BA81FBF932200DFC163 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,9 +162,6 @@
 		DE2F14911FB8F3A5001FFF11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DEB6445A1FD8B8BC009C7948 /* TransactionModel+CoreDataClass.swift */,
-				DEB6445B1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift */,
-				DEB644571FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld */,
 				DE2F14931FB8F3C7001FFF11 /* Transaction.swift */,
 			);
 			path = Model;
@@ -181,8 +170,7 @@
 		DE2F14921FB8F3AD001FFF11 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				DE6AE2C91FC648ED009B8409 /* ITransactionManagerSvc.swift */,
-				DEB6445E1FD8B9D4009C7948 /* TransactionSvcCoreData.swift */,
+				DE83697E201E956A003290CA /* TransactionSvcAPI.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -357,15 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2F14941FB8F3C7001FFF11 /* Transaction.swift in Sources */,
-				DEB6445D1FD8B8BC009C7948 /* TransactionModel+CoreDataProperties.swift in Sources */,
 				DE2F14641FB8F31A001FFF11 /* AppDelegate.swift in Sources */,
+				DE83697F201E956A003290CA /* TransactionSvcAPI.swift in Sources */,
 				DE179AF71FB9286600597052 /* AddTransactionViewController.swift in Sources */,
-				DEB644591FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld in Sources */,
 				DE179AF91FB9680600597052 /* TableViewCell.swift in Sources */,
-				DEB6445C1FD8B8BC009C7948 /* TransactionModel+CoreDataClass.swift in Sources */,
-				DE6AE2CA1FC648ED009B8409 /* ITransactionManagerSvc.swift in Sources */,
 				DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */,
-				DEB6445F1FD8B9D4009C7948 /* TransactionSvcCoreData.swift in Sources */,
 				DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,19 +656,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DEB644571FD8B7A7009C7948 /* TransactionDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DEB644581FD8B7A7009C7948 /* TransactionDataModel.xcdatamodel */,
-			);
-			currentVersion = DEB644581FD8B7A7009C7948 /* TransactionDataModel.xcdatamodel */;
-			path = TransactionDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DE2F14581FB8F319001FFF11 /* Project object */;
 }

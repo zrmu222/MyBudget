@@ -12,9 +12,12 @@ class TranactionListTableViewController: UITableViewController {
     
     
     // MARK: - Public Properties
-    var transactionList = [TransactionModel]()
-    let transactionManager = TransactionSvcCoreData.getInstance()
+    var transactionList: [Transaction] = []
     var sectionNames = ["Transaction", "Total"]
+    
+    let transactionSvc = TransactionSvcAPI.sharedInstance
+    
+    
     
     @IBOutlet weak var addTransactionButton: UIBarButtonItem!
     // MARK: - Private Properties
@@ -23,14 +26,37 @@ class TranactionListTableViewController: UITableViewController {
     // MARK: - <#superclass#>
     override func viewDidLoad() {
         super.viewDidLoad()
-        transactionList = transactionManager.retrieveAll()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        transactionList = transactionManager.retrieveAll()
-        self.tableView.reloadData()
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        let activitySpinner:UIActivityIndicatorView = UIActivityIndicatorView (activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        activitySpinner.center = self.view.center
+        self.view.addSubview(activitySpinner)
+        activitySpinner.bringSubview(toFront: self.view)
+        activitySpinner.startAnimating()
+        transactionSvc.retrieveAll(completionHandler: {(transactions:[Transaction]?, error: Error?) in
+            if error == nil {
+                DispatchQueue.main.async {
+                    self.transactionList = transactions!
+                    activitySpinner.stopAnimating()
+                    activitySpinner.hidesWhenStopped = true
+                    self.tableView.reloadData()
+                }
+            }else {
+                DispatchQueue.main.async {
+                    activitySpinner.stopAnimating()
+                    activitySpinner.hidesWhenStopped = true
+                }
+                print("Unexpected error occured")
+            }
+        })
+        
+        
+        
+        
+//        self.tableView.reloadData()
+//        tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,9 +90,7 @@ class TranactionListTableViewController: UITableViewController {
     // MARK: - Private Methods
     
     func getTotal() -> Double {
-        
         var total: Double = 0.0
-        
         for t in transactionList {
             if let price = Double(t.price!) {
                 total += price
@@ -76,15 +100,13 @@ class TranactionListTableViewController: UITableViewController {
     }
     
     
-    
-    
     // MARK: - <#delegate#>
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
-            return transactionManager.getCount()
+            return transactionList.count
         }else {
             return 1
         }
@@ -101,7 +123,7 @@ class TranactionListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TableViewCell
         // Configure the cell...
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TableViewCell
             cell.transaction = transactionList[indexPath.row]
         }else {
@@ -112,18 +134,18 @@ class TranactionListTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
-                            forRowAt indexPath: IndexPath){
-        if indexPath.section == 0 {
-            if editingStyle == .delete {
-                let tranx = transactionManager.retrieveAll()[indexPath.row]
-                transactionManager.delete(transaction: tranx)
-                self.transactionList = transactionManager.retrieveAll()
-                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                self.tableView.reloadData()
-            }
-        }
-    }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
+//                            forRowAt indexPath: IndexPath){
+//        if indexPath.section == 0 {
+//            if editingStyle == .delete {
+//                let tranx = transactionList[indexPath.row]
+//                transactionManager.delete(transaction: tranx)
+//                self.transactionList = transactionManager.retrieveAll()
+//                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
     
     // MARK: - Actions
     @IBAction func toggleEditingMode(_ sender: UIButton){
@@ -143,7 +165,5 @@ class TranactionListTableViewController: UITableViewController {
         }
     }
     
-
-
 
 }
