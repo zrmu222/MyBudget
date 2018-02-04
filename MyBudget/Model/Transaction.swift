@@ -17,14 +17,18 @@ class Transaction: Codable{
     var date: String?
     var note: String?
     
-    init(name: String, category: String,
-         price: String, date: String, description: String){
-        self.name = name
-        self.category = category
-        self.price = price
-        self.date = date
-        self.note = description
+    init(){
+        
     }
+    
+//    init(name: String, category: String,
+//         price: String, date: String, description: String){
+//        self.name = name
+//        self.category = category
+//        self.price = price
+//        self.date = date
+//        self.note = description
+//    }
     
 
 }

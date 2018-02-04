@@ -30,33 +30,7 @@ class TranactionListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let activitySpinner:UIActivityIndicatorView = UIActivityIndicatorView (activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        activitySpinner.center = self.view.center
-        self.view.addSubview(activitySpinner)
-        activitySpinner.bringSubview(toFront: self.view)
-        activitySpinner.startAnimating()
-        transactionSvc.retrieveAll(completionHandler: {(transactions:[Transaction]?, error: Error?) in
-            if error == nil {
-                DispatchQueue.main.async {
-                    self.transactionList = transactions!
-                    activitySpinner.stopAnimating()
-                    activitySpinner.hidesWhenStopped = true
-                    self.tableView.reloadData()
-                }
-            }else {
-                DispatchQueue.main.async {
-                    activitySpinner.stopAnimating()
-                    activitySpinner.hidesWhenStopped = true
-                }
-                print("Unexpected error occured")
-            }
-        })
-        
-        
-        
-        
-//        self.tableView.reloadData()
-//        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        getTransactionList()
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,6 +71,35 @@ class TranactionListTableViewController: UITableViewController {
             }
         }
         return total
+    }
+    
+    func getTransactionList(){
+        let activitySpinner:UIActivityIndicatorView = UIActivityIndicatorView (activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        activitySpinner.center = self.view.center
+        self.view.addSubview(activitySpinner)
+        activitySpinner.bringSubview(toFront: self.view)
+        activitySpinner.startAnimating()
+        transactionList.removeAll()
+        transactionSvc.retrieveAll(completionHandler: {(transactions, error) in
+            if error == nil {
+                DispatchQueue.main.async {
+                    for(_, value) in transactions! {
+                        self.transactionList.append(value)
+                    }
+                    activitySpinner.stopAnimating()
+                    activitySpinner.hidesWhenStopped = true
+                    self.tableView.reloadData()
+                }
+            }else {
+                DispatchQueue.main.async {
+                    activitySpinner.stopAnimating()
+                    activitySpinner.hidesWhenStopped = true
+                }
+                print("Unexpected error occured")
+            }
+        })
+        self.tableView.reloadData()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     
