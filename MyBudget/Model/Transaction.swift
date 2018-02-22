@@ -21,6 +21,17 @@ class Transaction: Codable{
         
     }
     
+    func convertToDictionary() -> [String: Any] {
+        return [
+            "name": self.name!,
+            "category" : self.category!,
+            "price" : self.price!,
+            "date" : self.date!,
+            "note" : self.note!
+            ]
+    }
+    
+    
 //    init(name: String, category: String,
 //         price: String, date: String, description: String){
 //        self.name = name

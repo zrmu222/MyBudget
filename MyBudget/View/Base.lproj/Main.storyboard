@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c9D-E6-ODm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yXw-ve-bqc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -108,6 +108,78 @@
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="80.50974512743629"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="w6S-DX-1X4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNW-cG-eZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="yXw-ve-bqc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tOS-E7-mnz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="c9D-E6-ODm" kind="show" id="ztt-gJ-Fjf"/>
+                        <segue destination="c9D-E6-ODm" kind="relationship" relationship="viewControllers" id="xBL-5w-mwL"/>
+                        <segue destination="A4r-Nz-fVW" kind="relationship" relationship="viewControllers" id="quv-Zl-x5a"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-1684" y="81"/>
+        </scene>
+        <!--Share Photo-->
+        <scene sceneID="hLc-9V-EhA">
+            <objects>
+                <viewController id="A4r-Nz-fVW" userLabel="Share Photo" customClass="FacebookShareViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ofE-R2-4GJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-wE-j3y">
+                                <rect key="frame" x="71" y="91" width="232" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="252" id="2e8-Dj-kIO"/>
+                                    <constraint firstAttribute="width" constant="232" id="ghX-iu-iN6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-QP-KSX">
+                                <rect key="frame" x="145.5" y="480" width="84" height="30"/>
+                                <state key="normal" title="Share Photo"/>
+                                <connections>
+                                    <action selector="sharePhoto:" destination="A4r-Nz-fVW" eventType="touchUpInside" id="mPf-q2-iAT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Or-JP-kzv">
+                                <rect key="frame" x="143.5" y="400" width="88" height="30"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="A4r-Nz-fVW" eventType="touchUpInside" id="21N-pQ-Lii"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Or-JP-kzv" firstAttribute="top" secondItem="hfk-wE-j3y" secondAttribute="bottom" constant="57" id="AsR-t6-Usj"/>
+                            <constraint firstItem="9Or-JP-kzv" firstAttribute="centerX" secondItem="ofE-R2-4GJ" secondAttribute="centerX" id="Ehj-nm-CYm"/>
+                            <constraint firstItem="hfk-wE-j3y" firstAttribute="centerX" secondItem="ofE-R2-4GJ" secondAttribute="centerX" id="FPy-Bg-fnQ"/>
+                            <constraint firstItem="3EG-QP-KSX" firstAttribute="centerX" secondItem="ofE-R2-4GJ" secondAttribute="centerX" id="Y6c-W1-aTF"/>
+                            <constraint firstItem="hfk-wE-j3y" firstAttribute="top" secondItem="Qsu-4h-qlG" secondAttribute="top" constant="71" id="aDb-a9-HR6"/>
+                            <constraint firstItem="3EG-QP-KSX" firstAttribute="top" secondItem="9Or-JP-kzv" secondAttribute="bottom" constant="50" id="bWe-8v-zL7"/>
+                            <constraint firstItem="hfk-wE-j3y" firstAttribute="leading" secondItem="Qsu-4h-qlG" secondAttribute="leading" constant="71" id="fNU-oT-Vu8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qsu-4h-qlG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Share Photo" id="0ja-In-4TL"/>
+                    <connections>
+                        <outlet property="imageTake" destination="hfk-wE-j3y" id="rgf-1G-1gg"/>
+                        <outlet property="shareButton" destination="3EG-QP-KSX" id="5mr-48-yn2"/>
+                        <outlet property="view" destination="ofE-R2-4GJ" id="aM4-V0-E0v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyC-fU-o2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1490.4000000000001" y="917.99100449775119"/>
+        </scene>
         <!--Add Transaction View Controller-->
         <scene sceneID="h40-eM-lSA">
             <objects>
@@ -117,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="Ogw-HQ-DkG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="634"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="585"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92g-hF-mEe">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -330,7 +402,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TA7-LY-Pxz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mui-bT-R4z">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
@@ -848,10 +920,12 @@
             </objects>
             <point key="canvasLocation" x="1465" y="-347"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Transactions-->
         <scene sceneID="8Pz-bu-d0x">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ct8-X6-SUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c9D-E6-ODm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Transactions" id="7uM-KS-geA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VeT-hM-nXv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -862,9 +936,11 @@
                         <segue destination="XcV-BM-JNA" kind="relationship" relationship="rootViewController" id="LaV-Iy-iJm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ct8-X6-SUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391" y="81"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xBL-5w-mwL"/>
+    </inferredMetricsTieBreakers>
 </document>
