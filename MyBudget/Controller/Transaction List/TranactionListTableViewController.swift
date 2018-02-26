@@ -80,12 +80,14 @@ class TranactionListTableViewController: UITableViewController {
         activitySpinner.bringSubview(toFront: self.view)
         activitySpinner.startAnimating()
         transactionList.removeAll()
+        //transactionSvc.getAllTransactions(completion)
+        
+        NSLog("TransactionList: \(transactionList.count)")
+        
         transactionSvc.retrieveAll(completionHandler: {(transactions, error) in
             if error == nil {
                 DispatchQueue.main.async {
-                    for(_, value) in transactions! {
-                        self.transactionList.append(value)
-                    }
+                    self.transactionList = transactions!
                     activitySpinner.stopAnimating()
                     activitySpinner.hidesWhenStopped = true
                     self.tableView.reloadData()

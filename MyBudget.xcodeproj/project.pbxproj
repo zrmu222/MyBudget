@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484504144CCBBFFD5FDAC7EF /* Pods_MyBudget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EE11650E953506B64961D5 /* Pods_MyBudget.framework */; };
+		8B2E0F43FEAE69B002E60F8F /* Pods_MyBudgetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679B3873050EBD1E4B35A84C /* Pods_MyBudgetTests.framework */; };
 		DE179AF71FB9286600597052 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE179AF61FB9286600597052 /* AddTransactionViewController.swift */; };
 		DE179AF91FB9680600597052 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE179AF81FB9680600597052 /* TableViewCell.swift */; };
+		DE1DE79A2043572B006D4762 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE1DE7912043572A006D4762 /* GoogleService-Info.plist */; };
 		DE2F14641FB8F31A001FFF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F14631FB8F31A001FFF11 /* AppDelegate.swift */; };
 		DE2F14691FB8F31A001FFF11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2F14671FB8F31A001FFF11 /* Main.storyboard */; };
 		DE2F146B1FB8F31A001FFF11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2F146A1FB8F31A001FFF11 /* Assets.xcassets */; };
@@ -19,12 +22,13 @@
 		DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D85C41FB90F5600EEB549 /* TranactionListTableViewController.swift */; };
 		DE6D087C1FDC2AA1008421FD /* CodeDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */; };
 		DE83697F201E956A003290CA /* TransactionSvcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83697E201E956A003290CA /* TransactionSvcAPI.swift */; };
-		DEB3368E203E3CF000049AFC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB3368D203E3CF000049AFC /* Bolts.framework */; };
-		DEB33690203E3CFC00049AFC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB3368F203E3CFC00049AFC /* FBSDKCoreKit.framework */; };
-		DEB33692203E3D0400049AFC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB33691203E3D0400049AFC /* FBSDKLoginKit.framework */; };
-		DEB33694203E3D1300049AFC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB33693203E3D1300049AFC /* FBSDKShareKit.framework */; };
 		DEB33697203E445500049AFC /* FacebookShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB33696203E445500049AFC /* FacebookShareViewController.swift */; };
 		DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC43BA81FBF932200DFC163 /* DetailViewController.swift */; };
+		DED2610E203E55A100DC72FA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2610A203E55A100DC72FA /* Bolts.framework */; };
+		DED2610F203E55A100DC72FA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2610B203E55A100DC72FA /* FBSDKCoreKit.framework */; };
+		DED26110203E55A100DC72FA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2610C203E55A100DC72FA /* FBSDKLoginKit.framework */; };
+		DED26111203E55A100DC72FA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2610D203E55A100DC72FA /* FBSDKShareKit.framework */; };
+		E9EB7CA28277AFCAF00E01D8 /* Pods_MyBudgetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17A25D921CD0EAD68425BC1 /* Pods_MyBudgetUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,55 +46,6 @@
 			remoteGlobalIDString = DE2F145F1FB8F31A001FFF11;
 			remoteInfo = MyBudget;
 		};
-		DEB3367F203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		DEB33681203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		DEB33683203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
-		DEB33685203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire macOS Tests";
-		};
-		DEB33687203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		DEB33689203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		DEB3368B203E3C3400049AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,8 +62,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		171B86516281830EB4AE7D8D /* Pods-MyBudgetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudgetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudgetUITests/Pods-MyBudgetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		30A1C2624D056E0EED22A7D3 /* Pods-MyBudgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudgetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudgetUITests/Pods-MyBudgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		590032E48C837D05F3974736 /* Pods-MyBudgetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudgetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudgetTests/Pods-MyBudgetTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C19B9063D8EC21D1425DD18 /* Pods-MyBudget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudget.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudget/Pods-MyBudget.release.xcconfig"; sourceTree = "<group>"; };
+		679B3873050EBD1E4B35A84C /* Pods_MyBudgetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBudgetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF098E4BC8C3F94F8ABC9B5 /* Pods-MyBudget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudget/Pods-MyBudget.debug.xcconfig"; sourceTree = "<group>"; };
+		A0EE11650E953506B64961D5 /* Pods_MyBudget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBudget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B9620FB92B7FEF2BA5A0E8 /* Pods-MyBudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudgetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudgetTests/Pods-MyBudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE179AF61FB9286600597052 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		DE179AF81FB9680600597052 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DE1DE7912043572A006D4762 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE2F14601FB8F31A001FFF11 /* MyBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2F14631FB8F31A001FFF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE2F14681FB8F31A001FFF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,13 +90,13 @@
 		DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataTest.swift; sourceTree = "<group>"; };
 		DE83697E201E956A003290CA /* TransactionSvcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSvcAPI.swift; sourceTree = "<group>"; };
-		DEB3368D203E3CF000049AFC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "FacebookSDKs-iOS-4.30.0/Bolts.framework"; sourceTree = "<group>"; };
-		DEB3368F203E3CFC00049AFC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4.30.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		DEB33691203E3D0400049AFC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-4.30.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		DEB33693203E3D1300049AFC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-4.30.0/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		DEB33696203E445500049AFC /* FacebookShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookShareViewController.swift; sourceTree = "<group>"; };
-		DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
 		DEC43BA81FBF932200DFC163 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DED2610A203E55A100DC72FA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Framework/Bolts.framework; sourceTree = "<group>"; };
+		DED2610B203E55A100DC72FA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DED2610C203E55A100DC72FA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DED2610D203E55A100DC72FA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Framework/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		F17A25D921CD0EAD68425BC1 /* Pods_MyBudgetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBudgetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +104,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB33694203E3D1300049AFC /* FBSDKShareKit.framework in Frameworks */,
-				DEB3368E203E3CF000049AFC /* Bolts.framework in Frameworks */,
-				DEB33690203E3CFC00049AFC /* FBSDKCoreKit.framework in Frameworks */,
-				DEB33692203E3D0400049AFC /* FBSDKLoginKit.framework in Frameworks */,
+				DED26111203E55A100DC72FA /* FBSDKShareKit.framework in Frameworks */,
+				DED2610E203E55A100DC72FA /* Bolts.framework in Frameworks */,
+				DED2610F203E55A100DC72FA /* FBSDKCoreKit.framework in Frameworks */,
+				DED26110203E55A100DC72FA /* FBSDKLoginKit.framework in Frameworks */,
+				484504144CCBBFFD5FDAC7EF /* Pods_MyBudget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2E0F43FEAE69B002E60F8F /* Pods_MyBudgetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,12 +124,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EB7CA28277AFCAF00E01D8 /* Pods_MyBudgetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6794436C8E5AC31E0061989B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF098E4BC8C3F94F8ABC9B5 /* Pods-MyBudget.debug.xcconfig */,
+				5C19B9063D8EC21D1425DD18 /* Pods-MyBudget.release.xcconfig */,
+				A1B9620FB92B7FEF2BA5A0E8 /* Pods-MyBudgetTests.debug.xcconfig */,
+				590032E48C837D05F3974736 /* Pods-MyBudgetTests.release.xcconfig */,
+				30A1C2624D056E0EED22A7D3 /* Pods-MyBudgetUITests.debug.xcconfig */,
+				171B86516281830EB4AE7D8D /* Pods-MyBudgetUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE179AF41FB9280400597052 /* Transaction List */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,12 +164,13 @@
 		DE2F14571FB8F319001FFF11 = {
 			isa = PBXGroup;
 			children = (
-				DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */,
+				DE1DE7912043572A006D4762 /* GoogleService-Info.plist */,
 				DE2F14621FB8F31A001FFF11 /* MyBudget */,
 				DE2F14771FB8F31A001FFF11 /* MyBudgetTests */,
 				DE2F14821FB8F31A001FFF11 /* MyBudgetUITests */,
 				DE2F14611FB8F31A001FFF11 /* Products */,
 				DE59805F1FD05E2C001A5CD1 /* Frameworks */,
+				6794436C8E5AC31E0061989B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,11 +248,14 @@
 		DE59805F1FD05E2C001A5CD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DEB33693203E3D1300049AFC /* FBSDKShareKit.framework */,
-				DEB33691203E3D0400049AFC /* FBSDKLoginKit.framework */,
-				DEB3368F203E3CFC00049AFC /* FBSDKCoreKit.framework */,
-				DEB3368D203E3CF000049AFC /* Bolts.framework */,
+				DED2610A203E55A100DC72FA /* Bolts.framework */,
+				DED2610B203E55A100DC72FA /* FBSDKCoreKit.framework */,
+				DED2610C203E55A100DC72FA /* FBSDKLoginKit.framework */,
+				DED2610D203E55A100DC72FA /* FBSDKShareKit.framework */,
 				DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */,
+				A0EE11650E953506B64961D5 /* Pods_MyBudget.framework */,
+				679B3873050EBD1E4B35A84C /* Pods_MyBudgetTests.framework */,
+				F17A25D921CD0EAD68425BC1 /* Pods_MyBudgetUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,20 +276,6 @@
 			path = "Transaction Detail";
 			sourceTree = "<group>";
 		};
-		DEB33675203E3C3400049AFC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DEB33680203E3C3400049AFC /* Alamofire.framework */,
-				DEB33682203E3C3400049AFC /* Alamofire iOS Tests.xctest */,
-				DEB33684203E3C3400049AFC /* Alamofire.framework */,
-				DEB33686203E3C3400049AFC /* Alamofire macOS Tests.xctest */,
-				DEB33688203E3C3400049AFC /* Alamofire.framework */,
-				DEB3368A203E3C3400049AFC /* Alamofire tvOS Tests.xctest */,
-				DEB3368C203E3C3400049AFC /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DEB33695203E443600049AFC /* Facebook Share */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,10 +291,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE2F14881FB8F31A001FFF11 /* Build configuration list for PBXNativeTarget "MyBudget" */;
 			buildPhases = (
+				417AA42AA35C171A4A330823 /* [CP] Check Pods Manifest.lock */,
 				DE2F145C1FB8F31A001FFF11 /* Sources */,
 				DE2F145D1FB8F31A001FFF11 /* Frameworks */,
 				DE2F145E1FB8F31A001FFF11 /* Resources */,
 				DE0B476E202A87C700FA63E0 /* Embed Frameworks */,
+				588142F743968602D2010249 /* [CP] Embed Pods Frameworks */,
+				06D29D785D5C7A7721AF02FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE2F148B1FB8F31A001FFF11 /* Build configuration list for PBXNativeTarget "MyBudgetTests" */;
 			buildPhases = (
+				5704574C09F19DB0D424D78C /* [CP] Check Pods Manifest.lock */,
 				DE2F14701FB8F31A001FFF11 /* Sources */,
 				DE2F14711FB8F31A001FFF11 /* Frameworks */,
 				DE2F14721FB8F31A001FFF11 /* Resources */,
+				0E8569368C93D106093B52DE /* [CP] Embed Pods Frameworks */,
+				DCFA34B9B221D8F9A497EF84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,9 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE2F148E1FB8F31A001FFF11 /* Build configuration list for PBXNativeTarget "MyBudgetUITests" */;
 			buildPhases = (
+				81FB3DAFEE88A6BBFACE001E /* [CP] Check Pods Manifest.lock */,
 				DE2F147B1FB8F31A001FFF11 /* Sources */,
 				DE2F147C1FB8F31A001FFF11 /* Frameworks */,
 				DE2F147D1FB8F31A001FFF11 /* Resources */,
+				C3CCE841B082655DB01C2B35 /* [CP] Embed Pods Frameworks */,
+				9F4E5B08F402EC2B0DFF28D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,12 +388,6 @@
 			mainGroup = DE2F14571FB8F319001FFF11;
 			productRefGroup = DE2F14611FB8F31A001FFF11 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = DEB33675203E3C3400049AFC /* Products */;
-					ProjectRef = DEB8886E203E363C008B4CA2 /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				DE2F145F1FB8F31A001FFF11 /* MyBudget */,
@@ -424,64 +397,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		DEB33680203E3C3400049AFC /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = DEB3367F203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEB33682203E3C3400049AFC /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = DEB33681203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEB33684203E3C3400049AFC /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = DEB33683203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEB33686203E3C3400049AFC /* Alamofire macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire macOS Tests.xctest";
-			remoteRef = DEB33685203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEB33688203E3C3400049AFC /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = DEB33687203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEB3368A203E3C3400049AFC /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = DEB33689203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEB3368C203E3C3400049AFC /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = DEB3368B203E3C3400049AFC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		DE2F145E1FB8F31A001FFF11 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DE2F146E1FB8F31A001FFF11 /* LaunchScreen.storyboard in Resources */,
+				DE1DE79A2043572B006D4762 /* GoogleService-Info.plist in Resources */,
 				DE2F146B1FB8F31A001FFF11 /* Assets.xcassets in Resources */,
 				DE2F14691FB8F31A001FFF11 /* Main.storyboard in Resources */,
 			);
@@ -502,6 +424,160 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06D29D785D5C7A7721AF02FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBudget/Pods-MyBudget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E8569368C93D106093B52DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBudgetTests/Pods-MyBudgetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		417AA42AA35C171A4A330823 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyBudget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5704574C09F19DB0D424D78C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyBudgetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		588142F743968602D2010249 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyBudget/Pods-MyBudget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBudget/Pods-MyBudget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81FB3DAFEE88A6BBFACE001E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyBudgetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F4E5B08F402EC2B0DFF28D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBudgetUITests/Pods-MyBudgetUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3CCE841B082655DB01C2B35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBudgetUITests/Pods-MyBudgetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCFA34B9B221D8F9A497EF84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBudgetTests/Pods-MyBudgetTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE2F145C1FB8F31A001FFF11 /* Sources */ = {
@@ -680,6 +756,7 @@
 		};
 		DE2F14891FB8F31A001FFF11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF098E4BC8C3F94F8ABC9B5 /* Pods-MyBudget.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -689,6 +766,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-4.30.0",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = MyBudget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -704,6 +782,7 @@
 		};
 		DE2F148A1FB8F31A001FFF11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C19B9063D8EC21D1425DD18 /* Pods-MyBudget.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -713,6 +792,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-4.30.0",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = MyBudget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -727,6 +807,7 @@
 		};
 		DE2F148C1FB8F31A001FFF11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B9620FB92B7FEF2BA5A0E8 /* Pods-MyBudgetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -744,6 +825,7 @@
 		};
 		DE2F148D1FB8F31A001FFF11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 590032E48C837D05F3974736 /* Pods-MyBudgetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -761,6 +843,7 @@
 		};
 		DE2F148F1FB8F31A001FFF11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A1C2624D056E0EED22A7D3 /* Pods-MyBudgetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -777,6 +860,7 @@
 		};
 		DE2F14901FB8F31A001FFF11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171B86516281830EB4AE7D8D /* Pods-MyBudgetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,50 +7,76 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
+import FirebaseDatabase
 
 
 class TransactionSvcAPI: NSObject {
-    
+
     static let sharedInstance = TransactionSvcAPI()
-    
-    
-    func retrieveAll(completionHandler: @escaping ([String : Transaction]?, Error?) -> Void){
-        
-        Alamofire.request("https://mybudget-fcdbd.firebaseio.com/transactions.json").responseJSON { responce in
+
+
+    func retrieveAll(completionHandler: @escaping ([Transaction]?, Error?) -> Void){
+        var transactions = [Transaction]()
+        let dbRef: DatabaseReference!
+        dbRef = Database.database().reference().child("transactions")
+        dbRef.observe(.value, with: { snapshot in
             
-            guard let value = responce.data else {
-                print("Error: did not receive data")
-                completionHandler(nil, responce.error)
-                return
+            if snapshot.childrenCount > 0 {
+                for item in snapshot.children.allObjects as! [DataSnapshot] {
+                    let data = item.value as? [String: AnyObject]
+                    let transaction = Transaction()
+                    transaction.name = data?["name"] as? String
+                    transaction.category = data?["category"] as? String
+                    transaction.price = data?["price"] as? String
+                    transaction.date = data?["date"] as? String
+                    transaction.note = data?["note"] as? String
+                    transactions.append(transaction)
+                    NSLog("Transaction added: \(transaction.name)")
                 }
-            
-            guard responce.error == nil else {
-                completionHandler(nil, responce.error)
-                return
-                }
-            
-            let decoder = JSONDecoder()
-            do {
-                let transactions = try decoder.decode([String : Transaction].self, from: value)
                 completionHandler(transactions, nil)
-                } catch {
-                    print("Error trying to convert transaction json file")
-                    print(error)
-                    completionHandler(nil, responce.error)
-                }
-        }
+            }
+        })
+        
     }
     
-    func create(transaction:Transaction, completion:((Error?) -> Void)?) {
-        guard let url = URL(string: "https://mybudget-fcdbd.firebaseio.com/transactions.json") else {return}
+    func getAllTransactions() -> [Transaction] {
+        var transactions = [Transaction]()
+        let dbRef: DatabaseReference!
+        dbRef = Database.database().reference().child("transactions")
+        dbRef.observe(.value, with: { snapshot in
 
-            Alamofire.request(url, method: .post, parameters: transaction.convertToDictionary(), encoding:JSONEncoding.default).response { responce in
-                if(responce.error != nil){
-                    NSLog("Error posting transaction : \(responce.error)")
+            if snapshot.childrenCount > 0 {
+                for item in snapshot.children.allObjects as! [DataSnapshot] {
+                    let data = item.value as? [String: AnyObject]
+                    let transaction = Transaction()
+                    transaction.name = data?["name"] as? String
+                    transaction.category = data?["category"] as? String
+                    transaction.price = data?["price"] as? String
+                    transaction.date = data?["date"] as? String
+                    transaction.note = data?["note"] as? String
+                    transactions.append(transaction)
+                    NSLog("Transaction added: \(transaction.name)")
                 }
-                
-                completion?(responce.error)
             }
+        })
+        
+        return transactions
+    }
+
+    func create(transaction:Transaction, completion:((Error?) -> Void)?) {
+
+        let dbRef: DatabaseReference!
+        dbRef = Database.database().reference().child("transactions")
+        let key = dbRef.childByAutoId().key
+        let tranx = ["name": transaction.name,
+                     "category": transaction.category,
+                     "price": transaction.price,
+                     "date": transaction.date,
+                     "note": transaction.note]
+        dbRef.child(key).setValue(tranx)
+        completion?(nil)
+
     }
 }
+
