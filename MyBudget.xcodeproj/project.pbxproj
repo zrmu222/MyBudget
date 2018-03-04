@@ -11,7 +11,6 @@
 		8B2E0F43FEAE69B002E60F8F /* Pods_MyBudgetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679B3873050EBD1E4B35A84C /* Pods_MyBudgetTests.framework */; };
 		DE179AF71FB9286600597052 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE179AF61FB9286600597052 /* AddTransactionViewController.swift */; };
 		DE179AF91FB9680600597052 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE179AF81FB9680600597052 /* TableViewCell.swift */; };
-		DE1DE79A2043572B006D4762 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE1DE7912043572A006D4762 /* GoogleService-Info.plist */; };
 		DE2F14641FB8F31A001FFF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F14631FB8F31A001FFF11 /* AppDelegate.swift */; };
 		DE2F14691FB8F31A001FFF11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2F14671FB8F31A001FFF11 /* Main.storyboard */; };
 		DE2F146B1FB8F31A001FFF11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2F146A1FB8F31A001FFF11 /* Assets.xcassets */; };
@@ -22,6 +21,9 @@
 		DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D85C41FB90F5600EEB549 /* TranactionListTableViewController.swift */; };
 		DE6D087C1FDC2AA1008421FD /* CodeDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */; };
 		DE83697F201E956A003290CA /* TransactionSvcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83697E201E956A003290CA /* TransactionSvcAPI.swift */; };
+		DEA370A6204AEB7E00932D77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEA370A5204AEB7E00932D77 /* GoogleService-Info.plist */; };
+		DEA370A9204AEF0400932D77 /* ChatLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA370A8204AEF0400932D77 /* ChatLoginViewController.swift */; };
+		DEA370AD204AF2A500932D77 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA370AC204AF2A500932D77 /* ChatViewController.swift */; };
 		DEB33697203E445500049AFC /* FacebookShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB33696203E445500049AFC /* FacebookShareViewController.swift */; };
 		DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC43BA81FBF932200DFC163 /* DetailViewController.swift */; };
 		DED2610E203E55A100DC72FA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2610A203E55A100DC72FA /* Bolts.framework */; };
@@ -72,7 +74,6 @@
 		A1B9620FB92B7FEF2BA5A0E8 /* Pods-MyBudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBudgetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBudgetTests/Pods-MyBudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE179AF61FB9286600597052 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		DE179AF81FB9680600597052 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		DE1DE7912043572A006D4762 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE2F14601FB8F31A001FFF11 /* MyBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2F14631FB8F31A001FFF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE2F14681FB8F31A001FFF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +91,9 @@
 		DE5980601FD05E2C001A5CD1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DE6D087B1FDC2AA1008421FD /* CodeDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataTest.swift; sourceTree = "<group>"; };
 		DE83697E201E956A003290CA /* TransactionSvcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSvcAPI.swift; sourceTree = "<group>"; };
+		DEA370A5204AEB7E00932D77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEA370A8204AEF0400932D77 /* ChatLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLoginViewController.swift; sourceTree = "<group>"; };
+		DEA370AC204AF2A500932D77 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		DEB33696203E445500049AFC /* FacebookShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookShareViewController.swift; sourceTree = "<group>"; };
 		DEC43BA81FBF932200DFC163 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DED2610A203E55A100DC72FA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Framework/Bolts.framework; sourceTree = "<group>"; };
@@ -164,7 +168,7 @@
 		DE2F14571FB8F319001FFF11 = {
 			isa = PBXGroup;
 			children = (
-				DE1DE7912043572A006D4762 /* GoogleService-Info.plist */,
+				DEA370A5204AEB7E00932D77 /* GoogleService-Info.plist */,
 				DE2F14621FB8F31A001FFF11 /* MyBudget */,
 				DE2F14771FB8F31A001FFF11 /* MyBudgetTests */,
 				DE2F14821FB8F31A001FFF11 /* MyBudgetUITests */,
@@ -237,6 +241,7 @@
 		DE4D85C31FB90F3E00EEB549 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DEA370A7204AEEEC00932D77 /* Chat */,
 				DEB33695203E443600049AFC /* Facebook Share */,
 				DE9F9FFF1FC0CB0D004A5D87 /* Transaction Detail */,
 				DE179AF51FB9282E00597052 /* Add Transaction */,
@@ -274,6 +279,15 @@
 				DEC43BA81FBF932200DFC163 /* DetailViewController.swift */,
 			);
 			path = "Transaction Detail";
+			sourceTree = "<group>";
+		};
+		DEA370A7204AEEEC00932D77 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DEA370A8204AEF0400932D77 /* ChatLoginViewController.swift */,
+				DEA370AC204AF2A500932D77 /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		DEB33695203E443600049AFC /* Facebook Share */ = {
@@ -403,7 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2F146E1FB8F31A001FFF11 /* LaunchScreen.storyboard in Resources */,
-				DE1DE79A2043572B006D4762 /* GoogleService-Info.plist in Resources */,
+				DEA370A6204AEB7E00932D77 /* GoogleService-Info.plist in Resources */,
 				DE2F146B1FB8F31A001FFF11 /* Assets.xcassets in Resources */,
 				DE2F14691FB8F31A001FFF11 /* Main.storyboard in Resources */,
 			);
@@ -499,12 +513,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyBudget/Pods-MyBudget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -591,6 +607,8 @@
 				DE179AF71FB9286600597052 /* AddTransactionViewController.swift in Sources */,
 				DE179AF91FB9680600597052 /* TableViewCell.swift in Sources */,
 				DE4D85C51FB90F5600EEB549 /* TranactionListTableViewController.swift in Sources */,
+				DEA370A9204AEF0400932D77 /* ChatLoginViewController.swift in Sources */,
+				DEA370AD204AF2A500932D77 /* ChatViewController.swift in Sources */,
 				DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
