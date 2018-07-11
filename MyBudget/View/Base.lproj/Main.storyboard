@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbg-bh-waf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="80.50974512743629"/>
+            <point key="canvasLocation" x="532" y="81"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w6S-DX-1X4">
@@ -122,6 +122,7 @@
                         <segue destination="c9D-E6-ODm" kind="relationship" relationship="viewControllers" id="xBL-5w-mwL"/>
                         <segue destination="A4r-Nz-fVW" kind="relationship" relationship="viewControllers" id="quv-Zl-x5a"/>
                         <segue destination="y8V-Dg-4aR" kind="relationship" relationship="viewControllers" id="pxG-IP-YRg"/>
+                        <segue destination="4bp-Tp-zOZ" kind="relationship" relationship="viewControllers" id="0hi-1M-eqm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNW-cG-eZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,6 +149,7 @@
                                     <constraint firstAttribute="width" constant="300" id="URa-qF-tRA"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa0-m1-o6w">
@@ -208,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA3-EY-Dev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2193" y="831"/>
+            <point key="canvasLocation" x="-2740" y="1560"/>
         </scene>
         <!--Chat-->
         <scene sceneID="T1i-8d-xJS">
@@ -256,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKz-ym-iCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3060" y="831"/>
+            <point key="canvasLocation" x="-2740" y="859"/>
         </scene>
         <!--Share Photo-->
         <scene sceneID="hLc-9V-EhA">
@@ -309,7 +311,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyC-fU-o2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1490.4000000000001" y="917.99100449775119"/>
+            <point key="canvasLocation" x="-1732" y="831"/>
+        </scene>
+        <!--Feedback-->
+        <scene sceneID="nhc-3C-NRw">
+            <objects>
+                <viewController id="4bp-Tp-zOZ" userLabel="Feedback" customClass="FeedbackViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AvX-S2-8ZY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI4-qP-7hB">
+                                <rect key="frame" x="16" y="20" width="343" height="580"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ZS6-J1-RKr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feedback" id="3hh-zx-8bB" userLabel="Feedback"/>
+                    <connections>
+                        <outlet property="webView" destination="uI4-qP-7hB" id="XgY-Ha-gNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IsW-yS-PxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="859"/>
         </scene>
         <!--Add Transaction View Controller-->
         <scene sceneID="h40-eM-lSA">
@@ -1073,6 +1101,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xBL-5w-mwL"/>
-        <segue reference="pxG-IP-YRg"/>
+        <segue reference="sog-gE-0JF"/>
     </inferredMetricsTieBreakers>
 </document>

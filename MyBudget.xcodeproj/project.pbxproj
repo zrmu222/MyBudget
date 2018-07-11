@@ -24,6 +24,9 @@
 		DEA370A6204AEB7E00932D77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEA370A5204AEB7E00932D77 /* GoogleService-Info.plist */; };
 		DEA370A9204AEF0400932D77 /* ChatLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA370A8204AEF0400932D77 /* ChatLoginViewController.swift */; };
 		DEA370AD204AF2A500932D77 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA370AC204AF2A500932D77 /* ChatViewController.swift */; };
+		DEA5AE302053792900F64785 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5AE2F2053792900F64785 /* FeedbackViewController.swift */; };
+		DEA5AE3220537BB500F64785 /* Feedback.html in Resources */ = {isa = PBXBuildFile; fileRef = DEA5AE3120537BB500F64785 /* Feedback.html */; };
+		DEA5AE3420537BC500F64785 /* WebSockets.js in Resources */ = {isa = PBXBuildFile; fileRef = DEA5AE3320537BC500F64785 /* WebSockets.js */; };
 		DEB33697203E445500049AFC /* FacebookShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB33696203E445500049AFC /* FacebookShareViewController.swift */; };
 		DEC43BA91FBF932200DFC163 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC43BA81FBF932200DFC163 /* DetailViewController.swift */; };
 		DED2610E203E55A100DC72FA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2610A203E55A100DC72FA /* Bolts.framework */; };
@@ -94,6 +97,9 @@
 		DEA370A5204AEB7E00932D77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEA370A8204AEF0400932D77 /* ChatLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLoginViewController.swift; sourceTree = "<group>"; };
 		DEA370AC204AF2A500932D77 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DEA5AE2F2053792900F64785 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		DEA5AE3120537BB500F64785 /* Feedback.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Feedback.html; sourceTree = "<group>"; };
+		DEA5AE3320537BC500F64785 /* WebSockets.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = WebSockets.js; sourceTree = "<group>"; };
 		DEB33696203E445500049AFC /* FacebookShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookShareViewController.swift; sourceTree = "<group>"; };
 		DEC43BA81FBF932200DFC163 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DED2610A203E55A100DC72FA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Framework/Bolts.framework; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 				DE2F146A1FB8F31A001FFF11 /* Assets.xcassets */,
 				DE2F146C1FB8F31A001FFF11 /* LaunchScreen.storyboard */,
 				DE2F146F1FB8F31A001FFF11 /* Info.plist */,
+				DEA5AE3120537BB500F64785 /* Feedback.html */,
+				DEA5AE3320537BC500F64785 /* WebSockets.js */,
 			);
 			path = MyBudget;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 		DE4D85C31FB90F3E00EEB549 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DEA5AE2E205378EA00F64785 /* Feedback */,
 				DEA370A7204AEEEC00932D77 /* Chat */,
 				DEB33695203E443600049AFC /* Facebook Share */,
 				DE9F9FFF1FC0CB0D004A5D87 /* Transaction Detail */,
@@ -288,6 +297,14 @@
 				DEA370AC204AF2A500932D77 /* ChatViewController.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		DEA5AE2E205378EA00F64785 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				DEA5AE2F2053792900F64785 /* FeedbackViewController.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		DEB33695203E443600049AFC /* Facebook Share */ = {
@@ -418,6 +435,8 @@
 			files = (
 				DE2F146E1FB8F31A001FFF11 /* LaunchScreen.storyboard in Resources */,
 				DEA370A6204AEB7E00932D77 /* GoogleService-Info.plist in Resources */,
+				DEA5AE3420537BC500F64785 /* WebSockets.js in Resources */,
+				DEA5AE3220537BB500F64785 /* Feedback.html in Resources */,
 				DE2F146B1FB8F31A001FFF11 /* Assets.xcassets in Resources */,
 				DE2F14691FB8F31A001FFF11 /* Main.storyboard in Resources */,
 			);
@@ -602,6 +621,7 @@
 			files = (
 				DEB33697203E445500049AFC /* FacebookShareViewController.swift in Sources */,
 				DE2F14941FB8F3C7001FFF11 /* Transaction.swift in Sources */,
+				DEA5AE302053792900F64785 /* FeedbackViewController.swift in Sources */,
 				DE2F14641FB8F31A001FFF11 /* AppDelegate.swift in Sources */,
 				DE83697F201E956A003290CA /* TransactionSvcAPI.swift in Sources */,
 				DE179AF71FB9286600597052 /* AddTransactionViewController.swift in Sources */,
